@@ -1,6 +1,3 @@
-// Create a link to the location using the longitude and latitude provided.
-// (Example https://www.google.com/maps?q=33.09745,-116.99572)
-
 $(document).ready(function(){
   var topSpots = $.getJSON("topspots.json", function(data){
     for (var i=0; i<data.length; i++){
@@ -11,6 +8,7 @@ $(document).ready(function(){
       var anchor = createAnchor(location);
 
       var newTrow = "<tr>" +
+                      "<td>" + (i+1) + "</td>" +
                       "<td>" + name + "</td>" +
                       "<td>" + description + "</td>" +
                       "<td>" + anchor + "</td>" +
